@@ -1,0 +1,138 @@
+@import "../../styles/constants";
+
+.container {
+    display: flex;
+    flex-direction: row;
+    padding-inline: 180px;
+    padding-top: 24px;
+
+    @media only screen and (max-width: $media-query-tablet - 1) {
+        justify-content: unset;
+        padding: 16px 16px 0px;
+    }
+}
+
+.formContainer {
+    margin-left: 72px;
+    width: 100%;
+    height: 100%;
+
+    @media only screen and (max-width: $media-query-tablet - 1) {
+        margin-top: unset;
+        margin: auto;
+        width: 100%;
+        height: unset;
+    }
+}
+
+.title {
+    margin-bottom: 0;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 150%;
+    color: $grey-2;
+}
+
+.buttonsContainer {
+    margin-top: 36px;
+    display: flex;
+}
+
+.nextButton {
+    background: $blue-main;
+    padding: 8px 24px;
+    border-radius: 27px;
+    border: unset;
+    color: $white;
+    font-weight: 700;
+}
+
+.backButton {
+    font-size: 12px;
+    text-transform: uppercase;
+    background: none;
+    border: none;
+    text-decoration: underline;
+    color: $blue-main;
+    margin-left: 24px;
+}
+
+.stepsContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin-top: 80px;
+}
+
+.step {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    flex-direction: row;
+
+    @media only screen and (max-width: $media-query-tablet - 1) {
+        width: fit-content;
+        flex-direction: column;
+    }
+}
+
+.circleContainer {
+    width: 56px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+    border: 4px solid $grey-13;
+
+    @media only screen and (max-width: $media-query-tablet - 1) {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+.circleIn {
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    background: $grey-13;
+
+    @media only screen and (max-width: $media-query-tablet - 1) {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.circleActive {
+    background: $dark-purple;
+    border: 4px solid $dark-purple
+}
+
+.circleInActive {
+    background-color: $white;
+}
+
+.stem {
+    display: block;
+    width: 4px;
+    height: 56px;
+    background: $grey-13;
+    margin-block: 4px;
+    border-radius: 16px;
+
+}
+
+.stemActive {
+    background-color: $dark-purple;
+}
