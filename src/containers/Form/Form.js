@@ -24,7 +24,7 @@ const SpotForm = () => {
         )
     }
 
-    const manageNextStep = (step) => {
+    const manageNextStepValidation = (step) => {
         const isValid = checkIsValidFormSteps({ formData, step });
         if (!isValid) {
             updateErrorsFormSteps({
@@ -55,13 +55,12 @@ const SpotForm = () => {
         <div className={styles.container}>
             <StepsController
                 formTitle="Add a new company"
-                manageNextStep={manageNextStep}
+                manageNextStepValidation={manageNextStepValidation}
                 steps={steps}
                 stepsAmount={3}
             />
         </div>
     )
-
 };
 
 export default SpotForm;

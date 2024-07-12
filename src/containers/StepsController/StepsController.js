@@ -3,11 +3,11 @@ import Button from "../../components/Button/Button"
 import StepsIndicator from "./StepsIndicator";
 import styles from "./StepsController.module.scss";
 
-const StepsController = ({ steps, manageNextStep, stepsAmount, formTitle }) => {
+const StepsController = ({ steps, manageNextStepValidation, stepsAmount, formTitle }) => {
     const [step, setStep] = useState(1);
 
     const onNextStep = () => {
-        if (manageNextStep(step) && step !== stepsAmount) {
+        if (manageNextStepValidation(step) && step !== stepsAmount) {
             setStep(step + 1)
         }
     }
