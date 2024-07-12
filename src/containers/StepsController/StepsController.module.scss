@@ -136,3 +136,9 @@
 .stemActive {
     background-color: $dark-purple;
 }
+
+.indicatorContainer {
+    @media only screen and (max-width: $media-query-mobile - 1) {
+        display: none;
+    }
+}
